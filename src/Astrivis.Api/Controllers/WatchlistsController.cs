@@ -12,21 +12,21 @@ public class WatchlistsController(IWatchlistService watchlistService) : Controll
     [HttpGet]
     public async Task<IActionResult> GetWatchlist()
     {
-        var watchlist = await watchlistService.GetWatchlistAsync();
+        var watchlist = await watchlistService.GetWatchlistAsync(string.Empty);
         return Ok(watchlist);
     }
 
     [HttpPost]
     public async Task<IActionResult> AddToWatchlist([FromBody] AddToWatchlistRequest request)
     {
-        await watchlistService.AddToWatchlistAsync(request.WalletId);
+        await watchlistService.AddToWatchlistAsync(request.UserWalletId, request.WalletId);
         return Ok(new { message = "Wallet added to watchlist." });
     }
 
     [HttpDelete("{walletId}")]
     public async Task<IActionResult> RemoveFromWatchlist(string walletId)
     {
-        var result = await watchlistService.RemoveFromWatchlistAsync(walletId);
+        var result = await watchlistService.RemoveFromWatchlistAsync(string.Empty ,walletId);
         if (!result)
         {
             return NotFound();
