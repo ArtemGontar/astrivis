@@ -104,6 +104,10 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Solnet.Rpc": {
+              "target": "Package",
+              "version": "[6.1.0, )"
             }
           },
           "imports": [

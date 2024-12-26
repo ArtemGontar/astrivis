@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Astrivis.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9db4bbe9cf6ca6e963640c7c19d0fd752d73fda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31e9cf2683cdbdf3817bd797aeef96406483aafd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Astrivis.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Astrivis.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

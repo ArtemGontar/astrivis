@@ -12,8 +12,15 @@ public class WalletRepository(ApplicationDbContext dbContext) : IWalletRepositor
         return await _dbContext.Wallets.FirstOrDefaultAsync(w => w.Id == walletId);
     }
 
-    public async Task<IEnumerable<Wallet?>> GetAllAsync()
+    public async Task<IEnumerable<Wallet>> GetAllAsync()
     {
         return await _dbContext.Wallets.ToListAsync();
+    }
+
+    public async Task<Wallet> AddAsync(Wallet wallet)
+    {
+        var entity = await _dbContext.Wallets.AddAsync(wallet);
+        await _dbContext.SaveChangesAsync();
+        return entity.Entity;
     }
 }

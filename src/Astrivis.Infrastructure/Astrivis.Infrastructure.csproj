@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+    <PackageReference Include="Solnet.Rpc" Version="6.1.0" />
   </ItemGroup>
 
 </Project>

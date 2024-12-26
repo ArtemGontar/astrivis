@@ -1,6 +1,3 @@
 namespace Astrivis.Application.Dtos;
 
-public class AddToWatchlistRequest
-{
-    
-}
+public record AddToWatchlistRequest(string WalletId);
