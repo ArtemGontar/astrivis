@@ -1,0 +1,16 @@
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/bin/Debug/net8.0/Astrivis.Infrastructure.deps.json
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/bin/Debug/net8.0/Astrivis.Infrastructure.dll
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/bin/Debug/net8.0/Astrivis.Infrastructure.pdb
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/bin/Debug/net8.0/Astrivis.Domain.dll
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/bin/Debug/net8.0/Astrivis.Domain.pdb
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.csproj.AssemblyReference.cache
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.AssemblyInfoInputs.cache
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.AssemblyInfo.cs
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.sourcelink.json
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.4DD4DE37.Up2Date
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.dll
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/refint/Astrivis.Infrastructure.dll
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/Astrivis.Infrastructure.pdb
+/Users/anduser/RiderProjects/astrivis/src/Astrivis.Infrastructure/obj/Debug/net8.0/ref/Astrivis.Infrastructure.dll
