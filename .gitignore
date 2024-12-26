@@ -1,26 +1,63 @@
-# Ignore build outputs
-bin/
-obj/
+# Ignore build output directories at any level
+**/bin/
+**/obj/
 
-# Rider project files
-.idea/
-*.suo
+# Ignore user-specific files
 *.user
 *.userosscache
+*.suo
+*.swp
 *.sln.docstates
 
-# NuGet packages
+# Ignore lock files
+project.lock.json
+project.fragment.lock.json
+*.lock.json
+
+# Ignore NuGet packages
 *.nupkg
-*.snupkg
 packages/
 
-# Logs
-*.log
+# Ignore build results
+*.dll
+*.exe
+*.app
+*.lib
+*.so
+*.dylib
+*.pdb
+*.cache
+*.ilk
+*.map
+*.hdr
+*.rsp
+*.lo
+*.o
+*.ko
 
-# User-specific files
-*.rsuser
-*.sln.ide
-*.sln.docstates
-
-# Visual Studio Code files
+# Ignore IDE settings
+.vs/
+.idea/
+*.vcxproj.*
 .vscode/
+
+# Ignore logs and debug files
+*.log
+debug/
+*.tlog
+
+# Ignore test results
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+
+# Ignore publish output
+publish/
+out/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.DS_Store
+Thumbs.db

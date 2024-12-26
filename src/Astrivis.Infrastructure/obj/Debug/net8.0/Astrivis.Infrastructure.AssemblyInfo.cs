@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Astrivis.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31e9cf2683cdbdf3817bd797aeef96406483aafd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddd6c893af3c55b5a4c2625eba5505fe78191210")]
 [assembly: System.Reflection.AssemblyProductAttribute("Astrivis.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Astrivis.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
