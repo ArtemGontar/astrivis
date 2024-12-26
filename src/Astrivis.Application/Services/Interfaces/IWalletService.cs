@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Astrivis.Domain.Entities;
 
 namespace Astrivis.Application.Services.Interfaces;

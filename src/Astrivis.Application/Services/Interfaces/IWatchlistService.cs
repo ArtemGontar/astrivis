@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace Astrivis.Application.Services.Interfaces;
 
 public interface IWatchlistService
