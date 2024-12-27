@@ -1,6 +1,37 @@
 @Astrivis.Api_HostAddress = http://localhost:5251
 
-GET {{Astrivis.Api_HostAddress}}/weatherforecast/
+### WatchlistsController
+
+### Get Watchlist
+GET {{Astrivis.Api_HostAddress}}/api/v1/watchlists/Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y
 Accept: application/json
 
-###
+### Add to Watchlist
+POST {{Astrivis.Api_HostAddress}}/api/v1/watchlists/Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y
+Content-Type: application/json
+
+{
+  "walletAddress": "Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y"
+}
+
+### Remove from Watchlist
+DELETE {{Astrivis.Api_HostAddress}}/api/v1/watchlists/Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y
+Content-Type: application/json
+
+{
+  "walletAddress": "Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y"
+}
+
+### WalletsController
+
+### Get Wallets
+GET {{Astrivis.Api_HostAddress}}/api/v1/wallets?page=1&limit=10
+Accept: application/json
+
+### Get Wallet Details
+GET {{Astrivis.Api_HostAddress}}/api/v1/wallets/Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y
+Accept: application/json
+
+### Add Wallet
+POST {{Astrivis.Api_HostAddress}}/api/v1/wallets/Gbfudd5GxrcHXJK1Ab96ZsGLwXEt6etjqQmozmu1C91Y
+Accept: application/json

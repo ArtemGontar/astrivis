@@ -6,6 +6,11 @@ namespace Astrivis.Domain.Entities;
 public record Token
 {
     /// <summary>
+    /// The unique identifier of the token.
+    /// </summary>
+    public Guid Id { get; set; }
+
+    /// <summary>
     /// The unique address of the token.
     /// </summary>
     public string TokenAddress { get; init; }
