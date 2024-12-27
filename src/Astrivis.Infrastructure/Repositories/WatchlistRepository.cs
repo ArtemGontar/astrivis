@@ -1,27 +1,49 @@
 using Astrivis.Domain.Entities;
 using Astrivis.Infrastructure.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Astrivis.Infrastructure.Repositories;
 
-public class WatchlistRepository : IWatchlistRepository
+public class WatchlistRepository(ApplicationDbContext dbContext) : IWatchlistRepository
 {
-    public Task<Watchlist?> GetByIdAsync(Guid watchlistId)
+    private readonly ApplicationDbContext _context = dbContext;
+
+    /// <inheritdoc />
+    public async Task<Watchlist?> GetByIdAsync(Guid watchlistId)
     {
-        throw new NotImplementedException();
+        return await _context.Watchlists.FindAsync(watchlistId);
     }
 
-    public Task<IEnumerable<Watchlist>> GetByUserWalletIdAsync(string userWalletId)
+    /// <inheritdoc />
+    public async Task<IReadOnlyList<Watchlist>> GetByUserWalletAddressAsync(string userWalletAddress)
     {
-        throw new NotImplementedException();
+        return await _context.Watchlists
+            .Where(w => w.UserWalletAddress == userWalletAddress)
+            .ToListAsync();
     }
 
-    public Task<Watchlist> AddAsync(Watchlist watchlist)
+    /// <inheritdoc />
+    public async Task<Watchlist> AddAsync(Watchlist watchlist)
     {
-        throw new NotImplementedException();
+        watchlist.Id = Guid.NewGuid();
+        watchlist.CreatedAt = DateTime.UtcNow;
+        _context.Watchlists.Add(watchlist);
+        await _context.SaveChangesAsync();
+        return watchlist;
     }
 
-    public Task<bool> RemoveAsync(Watchlist watchlist)
+    /// <inheritdoc />
+    public async Task<bool> RemoveAsync(Guid watchlistId)
     {
-        throw new NotImplementedException();
+        var watchlist = await GetByIdAsync(watchlistId);
+
+        if (watchlist == null)
+        {
+            return false;
+        }
+
+        _context.Watchlists.Remove(watchlist);
+        await _context.SaveChangesAsync();
+        return true;
     }
 }

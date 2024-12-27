@@ -1,7 +1,17 @@
 namespace Astrivis.Domain.Entities;
 
-public class Token
+/// <summary>
+/// Represents a token associated with a wallet, including its address and balance.
+/// </summary>
+public record Token
 {
-    public string TokenAddress { get; set; }
-    public decimal Balance { get; set; }
+    /// <summary>
+    /// The unique address of the token.
+    /// </summary>
+    public string TokenAddress { get; init; }
+
+    /// <summary>
+    /// The balance of the token.
+    /// </summary>
+    public decimal Balance { get; init; }
 }

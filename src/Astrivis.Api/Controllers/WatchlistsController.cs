@@ -19,14 +19,14 @@ public class WatchlistsController(IWatchlistService watchlistService) : Controll
     [HttpPost]
     public async Task<IActionResult> AddToWatchlist([FromBody] AddToWatchlistRequest request)
     {
-        await watchlistService.AddToWatchlistAsync(request.UserWalletId, request.WalletId);
+        await watchlistService.AddToWatchlistAsync(request.UserWalletAddress, request.WalletAddress);
         return Ok(new { message = "Wallet added to watchlist." });
     }
 
-    [HttpDelete("{walletId}")]
-    public async Task<IActionResult> RemoveFromWatchlist(string walletId)
+    [HttpDelete]
+    public async Task<IActionResult> RemoveFromWatchlist([FromBody] RemoveFromWatchlistRequest request)
     {
-        var result = await watchlistService.RemoveFromWatchlistAsync(string.Empty ,walletId);
+        var result = await watchlistService.RemoveFromWatchlistAsync(request.UserWalletAddress ,request.WalletAddress);
         if (!result)
         {
             return NotFound();

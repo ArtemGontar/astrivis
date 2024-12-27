@@ -12,18 +12,18 @@ public class SolanaClient : ISolanaClient
         _rpcClient = rpcClient;
     }
 
-    public async Task<Wallet?> GetWalletInfoAsync(string walletId)
+    public async Task<Wallet?> GetWalletInfoAsync(string walletAddress)
     {
         var wallet = new Wallet();
-        var accountInfoTask = _rpcClient.GetAccountInfoAsync(walletId);
-        var tokenAccountsTask = _rpcClient.GetTokenAccountsByOwnerAsync(walletId, tokenProgramId: "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
+        var accountInfoTask = _rpcClient.GetAccountInfoAsync(walletAddress);
+        var tokenAccountsTask = _rpcClient.GetTokenAccountsByOwnerAsync(walletAddress, tokenProgramId: "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
 
         var accountInfo = await accountInfoTask;
         if (accountInfo.WasSuccessful && accountInfo.Result != null)
         {
             wallet.Id = Guid.NewGuid();
             wallet.Balance = accountInfo.Result.Value.Lamports / 1000000000m; // Convert lamports to SOL
-            wallet.WalletAddress = walletId;
+            wallet.WalletAddress = walletAddress;
         }
 
         var tokenAccounts = await tokenAccountsTask;

@@ -5,7 +5,7 @@ namespace Astrivis.Application.Services.Interfaces;
 
 public interface IWatchlistService
 {
-    Task<IEnumerable<Watchlist>> GetWatchlistAsync(string userWalletId);
-    Task<Watchlist> AddToWatchlistAsync(string userWalletId, string walletId);
-    Task<bool> RemoveFromWatchlistAsync(string userWalletId, string walletId);
+    Task<IEnumerable<Watchlist>> GetWatchlistAsync(string userWalletAddress);
+    Task<Watchlist> AddToWatchlistAsync(string userWalletAddress, string walletAddress);
+    Task<bool> RemoveFromWatchlistAsync(string userWalletAddress, string walletAddress);
 }
