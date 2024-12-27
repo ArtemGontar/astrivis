@@ -3,10 +3,8 @@ using Astrivis.Application.Services.Interfaces;
 using Astrivis.Infrastructure;
 using Astrivis.Infrastructure.Clients;
 using Astrivis.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Builder;
+using Astrivis.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Solnet.Rpc;
 
 var builder = WebApplication.CreateBuilder(args);

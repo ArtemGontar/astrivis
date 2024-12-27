@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Astrivis.Infrastructure.Repositories;
 
+/// <inheritdoc />
 public class WatchlistRepository(ApplicationDbContext dbContext) : IWatchlistRepository
 {
     private readonly ApplicationDbContext _context = dbContext;

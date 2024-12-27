@@ -2,6 +2,10 @@ using Astrivis.Domain.Entities;
 
 namespace Astrivis.Infrastructure.Repositories.Interfaces;
 
+/// <summary>
+/// Defines the contract for interacting with the watchlist data store.
+/// Provides methods for managing watchlist entries, including retrieving, adding, and removing entries.
+/// </summary>
 public interface IWatchlistRepository
 {
     /// <summary>

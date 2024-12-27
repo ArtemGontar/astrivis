@@ -1,29 +1,31 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Astrivis.Application.Services.Interfaces;
 using Astrivis.Domain.Entities;
 using Astrivis.Infrastructure.Clients;
 using Astrivis.Infrastructure.Repositories;
+using Astrivis.Infrastructure.Repositories.Interfaces;
 
 namespace Astrivis.Application.Services;
 
+/// <inheritdoc />
 public class WalletService(IWalletRepository walletRepository, ISolanaClient solanaClient)
     : IWalletService
 {
-    public Task<IEnumerable<Wallet>> GetAllWalletsAsync(int page, int limit)
+    /// <inheritdoc />
+    public Task<(IEnumerable<Wallet> wallets, int totalCount)> GetAllWalletsAsync(int page, int limit)
     {
-        return walletRepository.GetAllAsync();
+        return walletRepository.GetAllAsync(page, limit);
     }
 
-    public Task<Wallet?> GetWalletInfo(string walletId)
+    /// <inheritdoc />
+    public Task<Wallet?> GetWalletInfo(string walletAddress)
     {
-        return solanaClient.GetWalletInfoAsync(walletId);
+        return solanaClient.GetWalletInfoAsync(walletAddress);
     }
 
-    public async Task<Wallet> AddWalletAsync(string walletId)
+    /// <inheritdoc />
+    public async Task<Wallet> AddWalletAsync(string walletAddress)
     {
-        var walletInfo =  await solanaClient.GetWalletInfoAsync(walletId);
+        var walletInfo =  await solanaClient.GetWalletInfoAsync(walletAddress);
         if(walletInfo == null)
         {
             //TODO: Return 404 if wallet not found

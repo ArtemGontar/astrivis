@@ -26,7 +26,12 @@ public class Wallet
     public string? OwnerName { get; set; }
 
     /// <summary>
-    /// The collection of tokens associated with the wallet.
+    /// The collection of fungible tokens associated with the wallet.
     /// </summary>
-    public ICollection<Token> Tokens { get; set; } = new List<Token>();
+    public List<Token> FungibleTokens { get; set; } = new List<Token>();
+
+    /// <summary>
+    /// The collection of non-fungible tokens associated with the wallet.
+    /// </summary>
+    public List<Token> NonFungibleTokens { get; set; } = new List<Token>();
 }
