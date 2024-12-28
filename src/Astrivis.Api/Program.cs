@@ -16,15 +16,20 @@ builder.Services.AddSwaggerGen();
 
 // Register the in-memory database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseInMemoryDatabase("InMemoryDb"));
+    options.UseInMemoryDatabase("AstrivisDb"));
 
 // Register application services
 builder.Services.AddScoped<IWalletService, WalletService>();
-builder.Services.AddScoped<ISolanaClient, SolanaClient>();
-builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
+builder.Services.AddScoped<IWatchlistService, WatchlistService>();
 
-// Register Solana RPC client
-builder.Services.AddSingleton<IRpcClient>(ClientFactory.GetClient(Cluster.MainNet));
+// Register repositories
+builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+builder.Services.AddScoped<IWatchlistRepository, WatchlistRepository>();
+
+// Register Solana client
+builder.Services.AddScoped<ISolanaClient, SolanaClient>();
+builder.Services.AddSingleton(ClientFactory.GetClient(Cluster.MainNet));
 
 var app = builder.Build();
 
